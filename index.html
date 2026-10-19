@@ -141,6 +141,7 @@ footer.app-footer{text-align:center;color:var(--ink-soft);font-size:.78rem;paddi
       <div class="confirmed-chain"><div class="chain" id="confirmedChainHost"></div></div>
       <div class="answer-row"><label for="answerInput">Your answer:</label><input id="answerInput" type="text" inputmode="decimal" aria-describedby="answerNote"><span id="answerUnit"></span><button class="btn btn-primary" id="btnCheckAnswer">Check answer</button></div>
       <div id="answerNote" class="answer-note">Enter a numerical value. You may type scientific notation as 1.81x10^24; displayed scientific notation uses × 10 with a superscript exponent. Answers within about 1% are accepted.</div>
+      <div id="answerSciNote" class="hint-box" style="display:none" role="note"></div>
       <div class="controls-row stage-controls no-print"><button class="btn btn-ghost hint-trigger" id="btnHintCalculate" hidden>💡 Hint</button></div>
       <div id="answerFeedback" role="status" aria-live="polite"></div><div id="calculateHintBox" class="hint-box" style="display:none"></div>
     </section>
@@ -164,6 +165,7 @@ footer.app-footer{text-align:center;color:var(--ink-soft);font-size:.78rem;paddi
   <label for="calcDisplay" class="visually-hidden">Calculator expression</label>
   <input id="calcDisplay" class="calc-display" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="calcHelp calcStatus">
   <p id="calcHelp" class="calc-help">Use e or EE for scientific notation, such as 6.022e23.</p>
+  <div id="calcContextTip" class="hint-box" role="note" hidden></div>
   <div id="calcStatus" class="calc-status" role="status" aria-live="polite"></div>
   <div class="calc-keypad" aria-label="Calculator keypad">
     <button type="button" data-calc="clear">Clear</button><button type="button" data-calc="backspace" aria-label="Backspace">⌫</button><button type="button" data-insert="(">(</button><button type="button" data-insert=")">)</button>
